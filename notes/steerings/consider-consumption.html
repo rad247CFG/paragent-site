@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Steering 4 — Scale Modularly - Paragent</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="/" class="brand">Paragent</a>
+            <ul>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/notes/six-steerings.html">Steerings</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <div class="note-meta">Note 009 — Six Steerings</div>
+            <h1>Steering 4 — Scale Modularly</h1>
+
+            <p><strong>Steer systems to scale by modular containment, not centralised abstraction.</strong></p>
+
+            <p>Scale is not free. It trades judgment for throughput. The larger the system, the more it must rely on abstraction, automation, and statistical inference to control cost. This is unavoidable. The error is not automation itself, but failing to design how errors are handled once abstraction breaks.</p>
+
+            <p>Scale Modularly is about ensuring that when systems fail—as they must—the failure is contained, legible, and rapidly correctable by humans with authority.</p>
+
+            <h2>Why Scale Breaks Agency</h2>
+
+            <p>At small scale, judgment is cheap. Context is available. Exceptions are handled locally. As scale increases, judgment becomes expensive and slow. To compensate, organisations push decision-making upward into rules, models, and automated enforcement.</p>
+
+            <p>This works—until it doesn't.</p>
+
+            <p>When rules encounter edge cases, systems face a choice:</p>
+
+            <ul>
+                <li>allow local correction, or</li>
+                <li>enforce abstraction and absorb damage</li>
+            </ul>
+
+            <p>Most large systems choose the latter.</p>
+
+            <h2>The PayPal Case</h2>
+
+            <p>PayPal requires automated fraud detection. Without it, transaction monitoring costs would explode and fraud would scale faster than human review capacity. This is not incompetence. It is necessary system design.</p>
+
+            <p>The failure occurred after automation made an error.</p>
+
+            <p>A legitimate $150 transaction—repayment for rehearsal drinks—was flagged as terrorism-related activity. The account was frozen. Funds were withheld. PayPal stood to make about $1 on the transaction. This is a known and accepted failure mode of automated risk systems.</p>
+
+            <p><strong>What followed is where Scale failed.</strong></p>
+
+            <h2>Escalation Without Authority</h2>
+
+            <p>Once escalated, the case entered PayPal's human support system. But these humans had no authority to override the system, no accountability for outcome, and no incentive to resolve the issue quickly. Their role was procedural containment, not judgment.</p>
+
+            <p>Resolution did not occur because it was correct.<br>It occurred because it was forced.</p>
+
+            <p>Only after escalation to AFCA did PayPal act.</p>
+
+            <h2>The True Cost of Scale Failure</h2>
+
+            <p>The financial impact was not limited to inconvenience:</p>
+
+            <ul>
+                <li>$700 paid in damages to the customer</li>
+                <li>~$3,000 charged to PayPal by AFCA for handling the complaint</li>
+                <li>a published AFCA case study documenting how to defeat PayPal when accounts are arbitrarily closed</li>
+                <li>uncounted internal time spent by PayPal staff resisting resolution</li>
+            </ul>
+
+            <p>None of this includes reputational damage, future complaint load, or downstream customer distrust.</p>
+
+            <p>The fraud system saved money.<br>The escalation system destroyed it.</p>
+
+            <h2>Why This Happens</h2>
+
+            <p>Centralised systems optimise for false-negative avoidance, not error recovery. Once flagged, the internal logic becomes defensive:</p>
+
+            <ul>
+                <li>resolving the case quickly sets precedent</li>
+                <li>precedent increases future cost</li>
+                <li>denying resolution preserves system integrity</li>
+            </ul>
+
+            <p>This is rational behaviour inside a broken design.</p>
+
+            <p><strong>The result is institutional Fuckwittery—not through malice, but through selection.</strong></p>
+
+            <h2>The Modular Alternative</h2>
+
+            <p>Scale Modularly means separating:</p>
+
+            <ul>
+                <li>detection from enforcement</li>
+                <li>enforcement from escalation</li>
+                <li>escalation from accountability</li>
+            </ul>
+
+            <p>Errors must be resolvable locally, by humans empowered to act, with consequences tied to outcome—not process adherence.</p>
+
+            <p>A system that can scale detection but not correction is fragile by design.</p>
+
+            <h2>The Steering</h2>
+
+            <p>Steering 4 does not reject automation.<br>It rejects monolithic abstraction.</p>
+
+            <p>Before scaling, ask:</p>
+
+            <ul>
+                <li>where do errors land?</li>
+                <li>who has authority to reverse them?</li>
+                <li>what does correction cost compared to resistance?</li>
+                <li>how quickly can judgment re-enter the system?</li>
+            </ul>
+
+            <p>Scale works when failure is cheap, local, and reversible.</p>
+
+            <p>When it isn't, automation doesn't reduce cost—it merely defers it, with interest.</p>
+
+            <p>That interest is paid in time, trust, and Fuckwittery.</p>
+        </article>
+    </main>
+</body>
+</html>

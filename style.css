@@ -1,0 +1,161 @@
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* System fonts for speed */
+  line-height: 1.5;
+  color: #111;
+  background-color: #fcfcfc; /* Slight off-white like paper */
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Layout */
+main {
+  max-width: 68ch; /* Optimal reading measure */
+  margin: 4rem auto;
+  padding: 0 1.5rem;
+}
+
+article {
+  margin-bottom: 1.5rem;
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 600;
+  line-height: 1.2;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+ul, ol {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Links */
+a {
+  color: #000;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Navigation */
+nav {
+  margin-bottom: 4rem;
+  border-bottom: 1px solid #111;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav .brand {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+}
+
+/* Note Specifics */
+.note-meta {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.note-list {
+  list-style: none;
+  padding: 0;
+  border-top: 1px solid #eee;
+}
+
+.note-list li {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.note-list a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.note-list a:hover {
+  background-color: transparent;
+  text-decoration: underline;
+  color: #000;
+}
+
+.note-date {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+/* Utilities */
+.mono {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9em;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  main {
+    margin: 2rem auto;
+  }
+}
