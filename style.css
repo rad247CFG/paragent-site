@@ -19,7 +19,7 @@ body {
 
 /* Layout */
 main {
-  max-width: 68ch; /* Optimal reading measure */
+  max-width: 85ch; /* Wider layout */
   margin: 4rem auto;
   padding: 0 1.5rem;
 }
