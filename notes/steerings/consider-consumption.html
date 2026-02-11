@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steering 4 — Scale Modularly - Paragent</title>
+    <title>Steering 3 — Scale Modularly - Paragent</title>
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
@@ -17,107 +17,222 @@
         </nav>
 
         <article>
-            <div class="note-meta">Note 009 — Six Steerings</div>
-            <h1>Steering 4 — Scale Modularly</h1>
+            <div class="note-meta">Note 008 — Six Steerings</div>
+            <h1>Steering 3 — Scale Modularly</h1>
 
-            <p><strong>Steer systems to scale by modular containment, not centralised abstraction.</strong></p>
+            <p><strong>Steer systems to scale through modular containment, not centralised abstraction.</strong></p>
 
-            <p>Scale is not free. It trades judgment for throughput. The larger the system, the more it must rely on abstraction, automation, and statistical inference to control cost. This is unavoidable. The error is not automation itself, but failing to design how errors are handled once abstraction breaks.</p>
+            <p>Scale is not free. It trades judgment for throughput. As systems grow, they must rely on abstraction&mdash;rules, models, automation, statistical inference&mdash;to remain economically viable. This is unavoidable.</p>
 
-            <p>Scale Modularly is about ensuring that when systems fail—as they must—the failure is contained, legible, and rapidly correctable by humans with authority.</p>
+            <p>The failure is not automation itself.<br>The failure is how systems behave once abstraction breaks.</p>
 
-            <h2>Why Scale Breaks Agency</h2>
+            <p>Large systems fail when they cannot contain, correct, and reverse errors locally.</p>
 
-            <p>At small scale, judgment is cheap. Context is available. Exceptions are handled locally. As scale increases, judgment becomes expensive and slow. To compensate, organisations push decision-making upward into rules, models, and automated enforcement.</p>
+            <h2>Scale Fails on Salt Curves (Goldilocks Zones)</h2>
 
-            <p>This works—until it doesn't.</p>
-
-            <p>When rules encounter edge cases, systems face a choice:</p>
+            <p>Most large systems implicitly assume simple relationships between input intensity and outcomes:</p>
 
             <ul>
-                <li>allow local correction, or</li>
-                <li>enforce abstraction and absorb damage</li>
+                <li>more effort &rarr; better results</li>
+                <li>more rules &rarr; more safety</li>
+                <li>more automation &rarr; lower cost</li>
+                <li>more analysis &rarr; better decisions</li>
+                <li>stronger incentives &rarr; better behaviour</li>
             </ul>
 
-            <p>Most large systems choose the latter.</p>
+            <p>This assumption is wrong.</p>
 
-            <h2>The PayPal Case</h2>
-
-            <p>PayPal requires automated fraud detection. Without it, transaction monitoring costs would explode and fraud would scale faster than human review capacity. This is not incompetence. It is necessary system design.</p>
-
-            <p>The failure occurred after automation made an error.</p>
-
-            <p>A legitimate $150 transaction—repayment for rehearsal drinks—was flagged as terrorism-related activity. The account was frozen. Funds were withheld. PayPal stood to make about $1 on the transaction. This is a known and accepted failure mode of automated risk systems.</p>
-
-            <p><strong>What followed is where Scale failed.</strong></p>
-
-            <h2>Escalation Without Authority</h2>
-
-            <p>Once escalated, the case entered PayPal's human support system. But these humans had no authority to override the system, no accountability for outcome, and no incentive to resolve the issue quickly. Their role was procedural containment, not judgment.</p>
-
-            <p>Resolution did not occur because it was correct.<br>It occurred because it was forced.</p>
-
-            <p>Only after escalation to AFCA did PayPal act.</p>
-
-            <h2>The True Cost of Scale Failure</h2>
-
-            <p>The financial impact was not limited to inconvenience:</p>
+            <p>Many critical system inputs follow salt curves (Goldilocks zones):</p>
 
             <ul>
-                <li>$700 paid in damages to the customer</li>
-                <li>~$3,000 charged to PayPal by AFCA for handling the complaint</li>
-                <li>a published AFCA case study documenting how to defeat PayPal when accounts are arbitrarily closed</li>
-                <li>uncounted internal time spent by PayPal staff resisting resolution</li>
+                <li>too little input &rarr; failure</li>
+                <li>an optimal band &rarr; effectiveness</li>
+                <li>too much input &rarr; failure again</li>
             </ul>
 
-            <p>None of this includes reputational damage, future complaint load, or downstream customer distrust.</p>
+            <p>The input may be control, incentives, automation, analysis, oversight, or coordination effort.</p>
 
-            <p>The fraud system saved money.<br>The escalation system destroyed it.</p>
+            <p>Early movement along the curve produces real gains. Performance improves. Errors drop. Costs stabilise. Because these improvements are genuine, increasing input feels rational.</p>
 
-            <h2>Why This Happens</h2>
+            <p>The failure occurs at the upper inflection point.</p>
 
-            <p>Centralised systems optimise for false-negative avoidance, not error recovery. Once flagged, the internal logic becomes defensive:</p>
+            <p>Beyond this point:</p>
 
             <ul>
-                <li>resolving the case quickly sets precedent</li>
-                <li>precedent increases future cost</li>
-                <li>denying resolution preserves system integrity</li>
+                <li>additional input yields diminishing returns</li>
+                <li>then negative returns</li>
+                <li>then systemic harm</li>
             </ul>
 
-            <p>This is rational behaviour inside a broken design.</p>
+            <p>Crucially, the harm is delayed. The system continues to appear functional. When failure becomes visible, it is usually misdiagnosed as insufficient effort rather than excessive intensity.</p>
 
-            <p><strong>The result is institutional Fuckwittery—not through malice, but through selection.</strong></p>
+            <p>Scale failures are therefore not design mistakes in kind.<br>They are errors of degree.</p>
 
-            <h2>The Modular Alternative</h2>
+            <h2>Why This Matters for Scale (Agency)</h2>
 
-            <p>Scale Modularly means separating:</p>
+            <p>As systems scale, they implicitly assume a trade:</p>
+
+            <p>scale requires more control<br>more control requires less agency</p>
+
+            <p>This assumption is widespread&mdash;and wrong.</p>
+
+            <p>In reality, agency is a primary scaling constraint. Systems that suppress agency hit a ceiling early. Systems that solve the agency problem can scale 20&times; to 100&times; further before brittleness, overhead, and collapse set in.</p>
+
+            <p>This is not ideological. It is structural.</p>
+
+            <p>Agency is how systems:</p>
 
             <ul>
-                <li>detection from enforcement</li>
-                <li>enforcement from escalation</li>
-                <li>escalation from accountability</li>
+                <li>correct errors where they occur</li>
+                <li>adapt to edge cases</li>
+                <li>surface information early</li>
+                <li>prevent small failures from compounding</li>
             </ul>
 
-            <p>Errors must be resolvable locally, by humans empowered to act, with consequences tied to outcome—not process adherence.</p>
+            <p>When agency is suppressed, scale becomes fragile. Throughput increases, but resilience collapses. Correction costs explode. Growth slows, then reverses.</p>
 
-            <p>A system that can scale detection but not correction is fragile by design.</p>
+            <p>Agency itself follows a salt curve:</p>
+
+            <ul>
+                <li>too little agency &rarr; passivity, gaming, learned helplessness</li>
+                <li>an optimal band &rarr; initiative, correction, local intelligence</li>
+                <li>too much unbounded agency &rarr; incoherence</li>
+            </ul>
+
+            <p>Most large systems overshoot on control and undershoot on agency at the same time.</p>
+
+            <p>That combination is lethal.</p>
+
+            <p>Solving the agency problem does not merely improve culture or morale.<br>It unlocks an order-of-magnitude increase in sustainable scale.</p>
+
+            <h2>The Scale&ndash;Agency Paradox</h2>
+
+            <p>Scale increases complexity.<br>Complexity increases edge cases.<br>Edge cases require judgment.</p>
+
+            <p>Which means:</p>
+
+            <p><strong>the larger the system, the more agency it actually needs.</strong></p>
+
+            <p>Yet large systems respond to complexity by removing agency&mdash;replacing judgment with rules, discretion with procedure, and responsibility with process.</p>
+
+            <p>This creates a structural paradox:</p>
+
+            <p>scale demands more local judgment<br>scale design eliminates local judgment</p>
+
+            <p>Errors are no longer corrected where they occur. They propagate upward, harden into precedent, and require force to undo. Agency is diffused everywhere and concentrated nowhere.</p>
+
+            <p>This is how systems slide from Quadrant I Gain or Quadrant IV Advantage into Quadrant III Collapse at scale.</p>
+
+            <h2>Salt Curves and the Four Os</h2>
+
+            <p>Salt-curve failure at scale expresses itself through four recurring patterns.</p>
+
+            <p><strong>Overcorrection</strong><br>Inputs are intensified past the optimal band. Early success justifies escalation. False positives rise, but are tolerated.</p>
+
+            <p><strong>Oversight</strong><br>Judgment is replaced by layered procedure. Humans exist, but without authority, accountability, or outcome responsibility.</p>
+
+            <p><strong>Overlay</strong><br>Instead of reducing input, organisations add compensatory subsystems&mdash;appeals, exception handlers, privacy managers, make-good gestures.</p>
+
+            <p><strong>Offside</strong><br>Resolution requires force external to the system. Regulators, courts, or ombudsmen must intervene.</p>
+
+            <p>Each O is an attempt to avoid admitting the system has overshot its Goldilocks zone.</p>
+
+            <h2>The Paragentist Resolution</h2>
+
+            <p>The Paragentist solution is not to reject scale.<br>It is to change what scales.</p>
+
+            <p>Do not scale constraints.<br>Do not scale abstraction.<br>Do not scale centralised control.</p>
+
+            <p><strong>Scale agency modularly.</strong></p>
+
+            <p>This means:</p>
+
+            <ul>
+                <li>pushing judgment down, not up</li>
+                <li>keeping authority close to consequences</li>
+                <li>allowing local reversal without global precedent</li>
+                <li>bounding behaviour with interfaces, not micromanagement</li>
+            </ul>
+
+            <p>Constraints still exist&mdash;but they bound modules, not people.<br>Control defines limits; agency does the work inside them.</p>
+
+            <h2>Extreme Proof: Valve</h2>
+
+            <p>Valve is a decisive, empirical proof that getting agency right unlocks extreme scale.</p>
+
+            <p>Valve is a video-game developer, publisher, and platform company best known for creating Steam, the dominant global digital distribution platform for PC games. Steam serves hundreds of millions of users worldwide and handles payments, DRM, matchmaking, updates, and marketplace transactions at enormous scale.</p>
+
+            <p>What makes Valve remarkable is not just what it builds, but how it is organised.</p>
+
+            <p>Valve operates with:</p>
+
+            <ul>
+                <li>no formal managers</li>
+                <li>no fixed reporting lines</li>
+                <li>self-selecting teams</li>
+                <li>internal markets for talent allocation</li>
+                <li>peer-based accountability tied to outcomes</li>
+            </ul>
+
+            <p>Employees choose which problems to work on, form teams organically, and are evaluated by peers on delivered value rather than process compliance.</p>
+
+            <p>Despite this lack of traditional control, Valve generates extraordinary economic output.</p>
+
+            <p>In recent years, Valve has produced roughly $40&ndash;50 million in revenue per employee, depending on the estimate&mdash;20&times; to over 100&times; higher than large technology firms such as Apple, Google, Microsoft, Meta, or Amazon, whose revenue per employee typically sits below $2&ndash;3 million.</p>
+
+            <p>Valve did not achieve this by:</p>
+
+            <ul>
+                <li>tightening controls</li>
+                <li>adding management layers</li>
+                <li>centralising decision-making</li>
+            </ul>
+
+            <p>It achieved it by treating agency as the primary scaling mechanism.</p>
+
+            <p>Coordination still exists. Constraints still exist. But judgment lives locally, authority sits close to consequences, and correction happens where errors arise.</p>
+
+            <p>This model is not universally transferable&mdash;but it falsifies the claim that scale requires agency suppression.</p>
+
+            <h2>Reframing the Salt Curve</h2>
+
+            <p>At scale, the relevant salt curve is not control alone.<br>It is the balance between control and agency.</p>
+
+            <p>Most systems fail because they:</p>
+
+            <ul>
+                <li>keep increasing constraints past effectiveness</li>
+                <li>keep diffusing agency past usefulness</li>
+                <li>mistake compliance for reliability</li>
+            </ul>
+
+            <p>Once past the inflection point, every additional layer:</p>
+
+            <ul>
+                <li>slows correction</li>
+                <li>increases resentment</li>
+                <li>amplifies error cost</li>
+                <li>destroys optionality</li>
+            </ul>
+
+            <p>At that point, the system is not managing risk.<br>It is manufacturing it.</p>
 
             <h2>The Steering</h2>
 
-            <p>Steering 4 does not reject automation.<br>It rejects monolithic abstraction.</p>
+            <p>Scale Modularly means designing systems where agency scales with complexity, not against it.</p>
 
             <p>Before scaling, ask:</p>
 
             <ul>
-                <li>where do errors land?</li>
-                <li>who has authority to reverse them?</li>
+                <li>where does judgment live?</li>
+                <li>who can reverse errors locally?</li>
                 <li>what does correction cost compared to resistance?</li>
-                <li>how quickly can judgment re-enter the system?</li>
+                <li>how quickly can agency re-enter the system?</li>
             </ul>
 
             <p>Scale works when failure is cheap, local, and reversible.</p>
 
-            <p>When it isn't, automation doesn't reduce cost—it merely defers it, with interest.</p>
+            <p>When it isn't, automation doesn't reduce cost&mdash;<br>it merely defers it, with interest.</p>
 
             <p>That interest is paid in time, trust, and Fuckwittery.</p>
         </article>
