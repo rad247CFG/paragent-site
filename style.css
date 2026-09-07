@@ -227,3 +227,33 @@ footer p {
     margin: 2rem auto;
   }
 }
+
+/* Related essays (end of each note) */
+.related {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.related h2 {
+  font-size: 0.9rem;
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #666;
+}
+
+.related ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.related li {
+  margin-bottom: 0.6rem;
+}
+
+.related .why {
+  color: #666;
+}
